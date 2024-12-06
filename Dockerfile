@@ -6,13 +6,14 @@ WORKDIR /app
 
 # Copy the CSV file and the script into the container (adjust 'sales_data.csv' path if needed)
 COPY sales_data.csv sales_data.csv
-COPY script.py script.py  # Assuming the script is named 'script.py'
+COPY requirements.txt requirements.txt
+COPY main.py  main.py 
 
 # Install necessary Python libraries
-RUN pip install pandas matplotlib
+RUN pip install -r requirements.txt
 
 # Create the output directory (this ensures permissions and structure)
 RUN mkdir output
 
 # Command to run the script
-CMD ["python", "script.py"]
+CMD ["python", "main.py"]
