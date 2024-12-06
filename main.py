@@ -18,7 +18,7 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 
 # Create an output directory if it doesn't exist
-output_directory = 'output2'  # Change this to your desired folder name
+output_directory = 'output'  # Change this to your desired folder name
 os.makedirs(output_directory, exist_ok=True)  # Create the folder if it doesn't exist
 
 # Save the figure in JPG format within the output directory
